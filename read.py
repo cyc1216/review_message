@@ -10,3 +10,10 @@ with open('reviews.txt', 'r') as f :
 			print(len(data)) # 每讀1000筆顯示一次
 print('檔案讀取完畢,總共有', len(data), '筆資料')
 print('留言平均長度為', message/len(data))
+
+new = []
+for d in data :
+	if len(d) < 100 :
+		new.append(d)
+print('一共有', len(new), '筆留言小於100')
+print(new[0])
